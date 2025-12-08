@@ -23,5 +23,6 @@ Rails.application.routes.draw do
   # get "/blog/:title", to: "blog#show"
 
   # delete "/products/:id", to: "products#destroy"
+  root "products#index"
   resources :products
 end
