@@ -46,6 +46,9 @@ RUN bundle install && \
 # Copy application code
 COPY . .
 
+# Ensure Rails binstubs are executable
+# RUN chmod +x bin/rails bin/bundle bin/thrust
+
 # Precompile bootsnap code for faster boot times.
 # -j 1 disable parallel compilation to avoid a QEMU bug: https://github.com/rails/bootsnap/issues/495
 RUN bundle exec bootsnap precompile -j 1 app/ lib/
