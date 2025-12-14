@@ -1,9 +1,10 @@
 body {
     font-family: Arial, Helvetica, sans-serif;
     padding: 1rem;
+    background: aquamarine;
 }
 
-nav {
+nav.navbar {
     justify-content: flex-end;
     display: flex;
     font-size: 0.875em;
@@ -13,7 +14,7 @@ nav {
     padding: 1rem;
 }
 
-nav a {
+nav.navbar a {
     display: inline-block;
 }
 
@@ -42,6 +43,21 @@ section.product img {
     flex-basis: 50%;
     max-width: 50%;
 }
+
+section.settings {
+    display: flex;
+    gap: 1rem;
+}
+
+section.settings nav {
+    width: 200px;
+}
+
+section.settings nav a {
+    display: block;
+}
+
+
 
 
 
