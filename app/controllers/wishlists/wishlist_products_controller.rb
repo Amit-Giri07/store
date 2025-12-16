@@ -11,7 +11,7 @@ class Wishlists::WishlistProductsController < ApplicationController
     end
   end
 
-  def destroy
+  def destroy 
     @wishlist_product.destroy
     redirect_to @wishlist, notice: "#{@wishlist_product.product.name} removed from wishlist."
   end
