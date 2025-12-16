@@ -33,6 +33,10 @@ Rails.application.routes.draw do
   end
   resource :unsubscribe, only: [ :show ]
 
+  resources :wishlists do
+    resources :wishlist_products, only: [ :update, :destroy ], module: :wishlists
+  end
+
   namespace :settings do
     resource :email, only: [ :show, :update ]
     resource :password, only: [ :show, :update ]
