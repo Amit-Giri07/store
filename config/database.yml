@@ -7,6 +7,7 @@
 default: &default
   adapter: sqlite3
   max_connections: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  pool: 5
   timeout: 5000
 
 development:
@@ -27,6 +28,7 @@ production:
   primary:
     <<: *default
     database: storage/production.sqlite3
+
   cache:
     <<: *default
     database: storage/production_cache.sqlite3
